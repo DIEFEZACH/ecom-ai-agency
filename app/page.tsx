@@ -1,4 +1,5 @@
 import React from 'react';
+import CasosDeExito from '@/components/CasosDeExito'; // <-- Importa el componente
 
 export default function Home() {
   return (
@@ -147,6 +148,7 @@ export default function Home() {
 
         </div>
       </section>
+      <CasosDeExito />
     </main>
   );
 }
