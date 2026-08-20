@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Netlify Forms Register</title>
+</head>
+<body>
+  <!-- Este formulario está oculto, es solo para que Netlify mapee la base de datos -->
+  <form name="contacto-agencia" data-netlify="true" hidden>
+    <input type="text" name="nombre" />
+    <input type="email" name="email" />
+    <select name="facturacion">
+      <option value="0-50k"></option>
+      <option value="50k-200k"></option>
+      <option value="200k-500k"></option>
+      <option value="500k+"></option>
+    </select>
+    <input type="radio" name="modelo" value="setup" />
+    <input type="radio" name="modelo" value="agencia" />
+    <input type="radio" name="modelo" value="inversionista" />
+  </form>
+</body>
+</html>
