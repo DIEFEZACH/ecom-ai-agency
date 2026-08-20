@@ -12,16 +12,16 @@ export default function Home() {
       {/* Navegación Superior */}
       <header className="flex justify-between items-center p-6 lg:px-12 border-b border-neutral-900 bg-neutral-950/80 backdrop-blur-md sticky top-0 z-50">
         <div className="text-2xl font-bold tracking-tighter">
-          ECOM.AI<span className="text-blue-600">_</span>
+          ECOM.MAX<span className="text-blue-600">_</span>
         </div>
         <nav className="hidden md:flex gap-8 text-sm text-neutral-400 font-medium">
-          <a href="#arquitectura" className="hover:text-white transition-colors">Arquitectura IA</a>
+          <a href="#ecosistema" className="hover:text-white transition-colors">Infraestructura</a>
           <a href="#casos-exito" className="hover:text-white transition-colors">Casos de Éxito</a>
           <a href="#modelos-inversion" className="hover:text-white transition-colors">Modelos de Partnership</a>
         </nav>
-        <button className="bg-white text-black px-5 py-2.5 rounded-md text-sm font-bold hover:bg-neutral-200 transition-all">
+        <a href="#contacto" className="bg-white text-black px-5 py-2.5 rounded-md text-sm font-bold hover:bg-neutral-200 transition-all">
           Agendar Auditoría
-        </button>
+        </a>
       </header>
 
       {/* Hero Section */}
@@ -41,37 +41,41 @@ export default function Home() {
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-[1.1]">
           Escalamiento Omnicanal <br className="hidden md:block" />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-emerald-400">
-            Impulsado por Inteligencia Artificial.
+            Respaldado por un Gran Equipo.
           </span>
         </h1>
 
         {/* Subtítulo Descriptivo */}
         <p className="text-lg md:text-xl text-neutral-400 mb-12 max-w-3xl leading-relaxed">
-          Dominamos el algoritmo de Mercado Libre, Amazon y TikTok Shop. Fusionamos modelos predictivos operados por Claude AI con una infraestructura de Full Fulfillment para facturar a escala industrial.
+          Dominamos el algoritmo de Mercado Libre, Amazon y TikTok Shop. Desplegamos un escuadrón robusto de estrategas comerciales, diseñadores y personal de almacén sobre una infraestructura de Full Fulfillment para facturar a escala industrial.
         </p>
 
-        {/* Botones de Acción (CTAs) */}
+        {/* Botones de Acción (CTAs) con enlaces funcionales */}
         <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
-          <button className="bg-blue-600 text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-blue-700 transition-all shadow-lg shadow-blue-900/20">
+          <a href="#modelos-inversion" className="flex items-center justify-center bg-blue-600 text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-blue-700 transition-all shadow-lg shadow-blue-900/20">
             Ver Modelos de Inversión
-          </button>
-          <button className="border border-neutral-700 text-neutral-300 px-8 py-3.5 rounded-lg font-semibold hover:bg-neutral-800 hover:text-white transition-all">
+          </a>
+          <a href="#ecosistema" className="flex items-center justify-center border border-neutral-700 text-neutral-300 px-8 py-3.5 rounded-lg font-semibold hover:bg-neutral-800 hover:text-white transition-all">
             Descubrir Metodología
-          </button>
+          </a>
         </div>
       </section>
+      
       <Marcas />
-      <Ecosistema />
+
+      {/* Se agregó el ID ecosistema para que el botón te lleve directo aquí */}
+      <div id="ecosistema">
+        <Ecosistema />
+      </div>
+      
       <ModelosPartnership />
       <CasosDeExito />
-
       <Portafolio />
-
       <Contacto />
       
       {/* Footer Minimalista */}
       <footer className="border-t border-neutral-900 py-8 text-center text-sm text-neutral-600 bg-neutral-950">
-        <p>© {new Date().getFullYear()} ECOM.AI. Ingeniería en E-commerce. Todos los derechos reservados.</p>
+        <p>© {new Date().getFullYear()} ECOM.MAX. Ingeniería en E-commerce. Todos los derechos reservados.</p>
       </footer>
     </main>
   );
