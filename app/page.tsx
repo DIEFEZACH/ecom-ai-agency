@@ -24,40 +24,53 @@ export default function Home() {
         </a>
       </header>
 
-      {/* Hero Section */}
-      <section className="relative flex flex-col items-center justify-center px-6 py-32 lg:py-48 text-center max-w-5xl mx-auto">
-        {/* Etiqueta de Autoridad */}
-        <div className="inline-block px-4 py-1.5 mb-8 border border-neutral-800 rounded-full text-xs md:text-sm text-neutral-300 bg-neutral-900/50 shadow-sm shadow-blue-900/20">
-          <span className="flex items-center gap-2">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-            </span>
-            Resultados Comprobados: De $0 a MercadoLíder Platinum en 60 días
-          </span>
+      {/* Hero Section con Fondo Cinemático */}
+      <section className="relative flex flex-col items-center justify-center px-6 py-32 lg:py-48 text-center min-h-[90vh]">
+        
+        {/* IMAGEN DE FONDO Y CAPA OSCURA */}
+        <div className="absolute inset-0 overflow-hidden z-0 pointer-events-none">
+          <div className="absolute inset-0 bg-neutral-950/85 z-10"></div> {/* Capa oscura para que el texto se lea */}
+          <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent z-10"></div> {/* Difuminado hacia abajo */}
+          {/* Sustituye este link por la foto de tu equipo/oficina/almacén en Cloudinary */}
+          <img 
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" 
+            alt="Equipo ECOM.MAX" 
+            className="w-full h-full object-cover grayscale opacity-40"
+          />
         </div>
 
-        {/* Titular Principal (H1 Optimizado para SEO) */}
-        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-[1.1]">
-          Escalamiento Omnicanal <br className="hidden md:block" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-emerald-400">
-            Respaldado por un Gran Equipo.
-          </span>
-        </h1>
+        {/* CONTENIDO DEL HERO (Aseguramos que esté por encima de la imagen con relative z-20) */}
+        <div className="relative z-20 max-w-5xl mx-auto flex flex-col items-center">
+          {/* Etiqueta de Autoridad */}
+          <div className="inline-block px-4 py-1.5 mb-8 border border-neutral-800 rounded-full text-xs md:text-sm text-neutral-300 bg-neutral-900/50 backdrop-blur-sm shadow-sm shadow-blue-900/20">
+            <span className="flex items-center gap-2">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+              </span>
+              Resultados Comprobados: De $0 a MercadoLíder Platinum en 60 días
+            </span>
+          </div>
 
-        {/* Subtítulo Descriptivo */}
-        <p className="text-lg md:text-xl text-neutral-400 mb-12 max-w-3xl leading-relaxed">
-          Dominamos el algoritmo de Mercado Libre, Amazon y TikTok Shop. Desplegamos un escuadrón robusto de estrategas comerciales, diseñadores y personal de almacén sobre una infraestructura de Full Fulfillment para facturar a escala industrial.
-        </p>
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-[1.1]">
+            Escalamiento Omnicanal <br className="hidden md:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-emerald-400">
+              Respaldado por un Gran Equipo.
+            </span>
+          </h1>
 
-        {/* Botones de Acción (CTAs) con enlaces funcionales */}
-        <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
-          <a href="#modelos-inversion" className="flex items-center justify-center bg-blue-600 text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-blue-700 transition-all shadow-lg shadow-blue-900/20">
-            Ver Modelos de Inversión
-          </a>
-          <a href="#ecosistema" className="flex items-center justify-center border border-neutral-700 text-neutral-300 px-8 py-3.5 rounded-lg font-semibold hover:bg-neutral-800 hover:text-white transition-all">
-            Descubrir Metodología
-          </a>
+          <p className="text-lg md:text-xl text-neutral-400 mb-12 max-w-3xl leading-relaxed">
+            Dominamos el algoritmo de Mercado Libre, Amazon y TikTok Shop. Desplegamos un escuadrón robusto de estrategas comerciales, diseñadores y personal de almacén sobre una infraestructura de Full Fulfillment para facturar a escala industrial.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
+            <a href="#modelos-inversion" className="flex items-center justify-center bg-blue-600 text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-blue-700 transition-all shadow-lg shadow-blue-900/20">
+              Ver Modelos de Inversión
+            </a>
+            <a href="#ecosistema" className="flex items-center justify-center border border-neutral-700 text-neutral-300 px-8 py-3.5 rounded-lg font-semibold hover:bg-neutral-800 hover:text-white backdrop-blur-sm transition-all">
+              Descubrir Metodología
+            </a>
+          </div>
         </div>
       </section>
       

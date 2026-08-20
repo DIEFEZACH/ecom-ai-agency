@@ -19,21 +19,32 @@ export default function Ecosistema() {
       {/* Grid Bento Box */}
       <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-3 gap-4 auto-rows-[200px]">
         
-        {/* Box 1: Amazon & Mercado Libre (Span 2 col, 2 rows) */}
+        {/* Box 1: Amazon & Mercado Libre (CON LA IMAGEN DE FONDO) */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="md:col-span-2 md:row-span-2 bg-gradient-to-br from-neutral-900 to-neutral-950 border border-neutral-800 rounded-3xl p-8 relative overflow-hidden group hover:border-blue-500/50 transition-all"
+          className="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-3xl border border-neutral-800 group hover:border-blue-500/50 transition-all min-h-[300px]"
         >
-          <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 blur-[80px] rounded-full group-hover:bg-blue-500/20 transition-all"></div>
-          <ShoppingBag className="w-10 h-10 text-blue-400 mb-6" />
-          <h3 className="text-2xl font-bold text-white mb-3">Marketplaces Core</h3>
-          <p className="text-neutral-400 text-sm mb-6 leading-relaxed">
-            Ingeniería de listados para <strong>Amazon Seller Central</strong> y <strong>Mercado Libre</strong>. Dominio absoluto de FBA y Full Fulfillment, escalando de 0 a Platinum en tiempo récord mediante estrategias de Buy Box y posicionamiento algorítmico SEO.
-          </p>
-          <div className="flex gap-2">
-            <span className="text-xs font-bold px-3 py-1 bg-yellow-500/10 text-yellow-500 rounded-full border border-yellow-500/20">Mercado Libre</span>
-            <span className="text-xs font-bold px-3 py-1 bg-orange-500/10 text-orange-500 rounded-full border border-orange-500/20">Amazon FBA</span>
+          {/* Fondo con la imagen del Centro de Comando */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center opacity-30 grayscale group-hover:grayscale-0 group-hover:opacity-40 transition-all duration-700"
+            style={{ backgroundImage: "url('https://res.cloudinary.com/diefezach/image/upload/v1787201853/Gemini_Generated_Image_y06fmoy06fmoy06f_zo99ub.jpg')" }}
+          ></div>
+          
+          {/* Capa de difuminado para que el texto resalte */}
+          <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/80 to-transparent"></div>
+
+          {/* Contenido (relative z-10 para que flote sobre la foto) */}
+          <div className="relative z-10 p-8 h-full flex flex-col justify-end">
+            <ShoppingBag className="w-10 h-10 text-blue-400 mb-6" />
+            <h3 className="text-2xl font-bold text-white mb-3">Marketplaces Core</h3>
+            <p className="text-neutral-300 text-sm mb-6 leading-relaxed max-w-md">
+              Ingeniería de listados para <strong>Amazon Seller Central</strong> y <strong>Mercado Libre</strong>. Dominio absoluto de FBA y Full Fulfillment, escalando de 0 a Platinum en tiempo récord mediante estrategias de Buy Box y posicionamiento algorítmico SEO.
+            </p>
+            <div className="flex gap-2">
+              <span className="text-xs font-bold px-3 py-1 bg-yellow-500/10 text-yellow-500 rounded-full border border-yellow-500/20 backdrop-blur-md">Mercado Libre</span>
+              <span className="text-xs font-bold px-3 py-1 bg-orange-500/10 text-orange-500 rounded-full border border-orange-500/20 backdrop-blur-md">Amazon FBA</span>
+            </div>
           </div>
         </motion.div>
 
