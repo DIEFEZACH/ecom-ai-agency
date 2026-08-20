@@ -55,6 +55,9 @@ export default function Home() {
           </button>
         </div>
       </section>
+
+        <CasosDeExito />
+
       {/* Sección Modelos de Inversión */}
       <section id="modelos-inversion" className="py-24 px-6 max-w-7xl mx-auto border-t border-neutral-900/50 pt-32 mt-12">
         <div className="text-center mb-16">
@@ -65,9 +68,6 @@ export default function Home() {
             Esquemas diseñados para diferentes niveles de escalabilidad. Desde gestión algorítmica hasta inyección de capital en infraestructura Full Fulfillment.
           </p>
         </div>
-        
-        <CasosDeExito />
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
           
           {/* Tarjeta 1: Operador Pasivo */}
