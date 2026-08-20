@@ -1,69 +1,59 @@
-import Image from "next/image";
+import React from 'react';
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="min-h-screen selection:bg-blue-500 selection:text-white">
+      {/* Navegación Superior */}
+      <header className="flex justify-between items-center p-6 lg:px-12 border-b border-neutral-900 bg-neutral-950/80 backdrop-blur-md sticky top-0 z-50">
+        <div className="text-2xl font-bold tracking-tighter">
+          ECOM.AI<span className="text-blue-600">_</span>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <nav className="hidden md:flex gap-8 text-sm text-neutral-400 font-medium">
+          <a href="#arquitectura" className="hover:text-white transition-colors">Arquitectura IA</a>
+          <a href="#modelos-inversion" className="hover:text-white transition-colors">Modelos de Partnership</a>
+          <a href="#casos-exito" className="hover:text-white transition-colors">Casos de Éxito</a>
+        </nav>
+        <button className="bg-white text-black px-5 py-2.5 rounded-md text-sm font-bold hover:bg-neutral-200 transition-all">
+          Agendar Auditoría
+        </button>
+      </header>
+
+      {/* Hero Section */}
+      <section className="relative flex flex-col items-center justify-center px-6 py-32 lg:py-48 text-center max-w-5xl mx-auto">
+        {/* Etiqueta de Autoridad */}
+        <div className="inline-block px-4 py-1.5 mb-8 border border-neutral-800 rounded-full text-xs md:text-sm text-neutral-300 bg-neutral-900/50 shadow-sm shadow-blue-900/20">
+          <span className="flex items-center gap-2">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+            </span>
+            Resultados Comprobados: De $0 a MercadoLíder Platinum en 60 días
+          </span>
         </div>
-      </main>
-    </div>
+
+        {/* Titular Principal (H1 Optimizado para SEO) */}
+        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-[1.1]">
+          Escalamiento Omnicanal <br className="hidden md:block" />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-emerald-400">
+            Impulsado por Inteligencia Artificial.
+          </span>
+        </h1>
+
+        {/* Subtítulo Descriptivo */}
+        <p className="text-lg md:text-xl text-neutral-400 mb-12 max-w-3xl leading-relaxed">
+          Dominamos el algoritmo de Mercado Libre, Amazon y TikTok Shop. Fusionamos modelos predictivos operados por Claude AI con una infraestructura de Full Fulfillment para facturar a escala industrial.
+        </p>
+
+        {/* Botones de Acción (CTAs) */}
+        <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
+          <button className="bg-blue-600 text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-blue-700 transition-all shadow-lg shadow-blue-900/20">
+            Ver Modelos de Inversión
+          </button>
+          <button className="border border-neutral-700 text-neutral-300 px-8 py-3.5 rounded-lg font-semibold hover:bg-neutral-800 hover:text-white transition-all">
+            Descubrir Metodología
+          </button>
+        </div>
+      </section>
+    </main>
   );
 }
