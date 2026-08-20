@@ -65,6 +65,8 @@ export default function Home() {
             Esquemas diseñados para diferentes niveles de escalabilidad. Desde gestión algorítmica hasta inyección de capital en infraestructura Full Fulfillment.
           </p>
         </div>
+        
+        <CasosDeExito />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
           
@@ -148,7 +150,7 @@ export default function Home() {
 
         </div>
       </section>
-      <CasosDeExito />
+      
     </main>
   );
 }
