@@ -3,6 +3,7 @@ import CasosDeExito from '@/components/CasosDeExito';
 import Portafolio from '@/components/Portafolio';
 import Contacto from '@/components/Contacto';
 import Ecosistema from '@/components/Ecosistema';
+import Marcas from '@/components/Marcas';
 
 export default function Home() {
   return (
@@ -58,9 +59,9 @@ export default function Home() {
           </button>
         </div>
       </section>
+      <Marcas />
       <Ecosistema />
-
-        <CasosDeExito />
+      <CasosDeExito />
 
       {/* Sección Modelos de Inversión */}
       <section id="modelos-inversion" className="py-24 px-6 max-w-7xl mx-auto border-t border-neutral-900/50 pt-32 mt-12">
