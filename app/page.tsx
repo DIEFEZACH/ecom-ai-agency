@@ -12,8 +12,8 @@ export default function Home() {
         </div>
         <nav className="hidden md:flex gap-8 text-sm text-neutral-400 font-medium">
           <a href="#arquitectura" className="hover:text-white transition-colors">Arquitectura IA</a>
-          <a href="#modelos-inversion" className="hover:text-white transition-colors">Modelos de Partnership</a>
           <a href="#casos-exito" className="hover:text-white transition-colors">Casos de Éxito</a>
+          <a href="#modelos-inversion" className="hover:text-white transition-colors">Modelos de Partnership</a>
         </nav>
         <button className="bg-white text-black px-5 py-2.5 rounded-md text-sm font-bold hover:bg-neutral-200 transition-all">
           Agendar Auditoría
