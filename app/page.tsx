@@ -1,5 +1,6 @@
 import React from 'react';
-import CasosDeExito from '@/components/CasosDeExito'; // <-- Importa el componente
+import CasosDeExito from '@/components/CasosDeExito'; 
+import Contacto from '@/components/Contacto';
 
 export default function Home() {
   return (
@@ -150,7 +151,13 @@ export default function Home() {
 
         </div>
       </section>
+
+      <Contacto />
       
+      {/* Footer Minimalista */}
+      <footer className="border-t border-neutral-900 py-8 text-center text-sm text-neutral-600 bg-neutral-950">
+        <p>© {new Date().getFullYear()} ECOM.AI. Ingeniería en E-commerce. Todos los derechos reservados.</p>
+      </footer>
     </main>
   );
 }
