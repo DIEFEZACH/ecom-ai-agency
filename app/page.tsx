@@ -1,5 +1,6 @@
 import React from 'react';
 import CasosDeExito from '@/components/CasosDeExito'; 
+import Portafolio from '@/components/Portafolio';
 import Contacto from '@/components/Contacto';
 
 export default function Home() {
@@ -151,6 +152,8 @@ export default function Home() {
 
         </div>
       </section>
+
+      <Portafolio />
 
       <Contacto />
       
