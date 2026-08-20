@@ -2,6 +2,7 @@ import React from 'react';
 import CasosDeExito from '@/components/CasosDeExito'; 
 import Portafolio from '@/components/Portafolio';
 import Contacto from '@/components/Contacto';
+import Ecosistema from '@/components/Ecosistema';
 
 export default function Home() {
   return (
@@ -57,6 +58,7 @@ export default function Home() {
           </button>
         </div>
       </section>
+      <Ecosistema />
 
         <CasosDeExito />
 
